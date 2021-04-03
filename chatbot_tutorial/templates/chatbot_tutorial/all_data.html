@@ -1,0 +1,347 @@
+{% load staticfiles %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Click Info</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--  General CSS  -->
+    <style type="text/css">
+    .main_container{
+      max-width: 740px;
+      height: 100%;
+      margin: 10px auto 0px auto;
+    }
+    .in_container{
+      background: #ffff;
+      border-top:1px solid #F4F4F8;
+      border-radius: 2px;
+      box-shadow: 0 0 6px #c9d1de;
+      -webkit-box-shadow: 0 0 6px #c9d1de;
+      -moz-box-shadow: 0 0 6px #c9d1de;
+      -o-box-shadow: 0 0 6px #c9d1de;
+    }
+    .border {
+background: #F4F4F8;
+width:94%;
+height: 1px;
+
+
+    }
+    .back_link{
+      display: block;
+      text-decoration: none;
+      margin-top: 80px;
+      text-align: center;
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #3E3E3E;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+    .back_link .back_arrow_icon{
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    html{
+        width: 100%;
+    }
+    body{
+      width: 100%;
+      margin:0;
+      padding:0;
+      -webkit-font-smoothing: antialiased;
+      mso-margin-top-alt:0px;
+      mso-margin-bottom-alt:0px;
+      mso-padding-alt: 0px 0px 0px 0px;
+      background: #eef1f2;
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    p,h1,h2,h3,h4{
+      margin-top:0;
+      margin-bottom:0;
+      padding-top:0;
+      padding-bottom:0;
+    }
+    table{
+      font-size: 14px;
+      border: 0;
+    }
+    img{
+      border: none!important;
+    }
+    /*	
+	Side Navigation Menu V2, RWD
+	===================
+	Author: https://github.com/pablorgarcia
+ */
+
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  color:#A7A1AE;
+  background-color:#1F2739;
+}
+
+h1 {
+  font-size:3em; 
+  font-weight: 300;
+  line-height:1em;
+  text-align: center;
+  color: #4DC3FA;
+}
+
+h2 {
+  font-size:1em; 
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height:1em;
+  padding-bottom: 2em;
+  color: #FB667A;
+}
+
+h2 a {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FB667A;
+  text-decoration: none;
+}
+
+.blue { color: #185875; }
+.yellow { color: #FFF842; }
+
+.container th h1 {
+	  font-weight: bold;
+	  font-size: 1em;
+  text-align: left;
+  color: #185875;
+}
+
+.container td {
+	  font-weight: normal;
+	  font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+	   -moz-box-shadow: 0 2px 2px -2px #0E1119;
+	        box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.container {
+	  text-align: left;
+	  overflow: hidden;
+	  width: 125%;
+	  margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+}
+
+.container td, .container th {
+	  padding-bottom: 2%;
+	  padding-top: 2%;
+  padding-left:2%;  
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+	  background-color: #323C50;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+	  background-color: #2C3446;
+}
+
+.container th {
+	  background-color: #1F2739;
+}
+
+.container td:first-child { color: #FB667A; }
+
+.container tr:hover {
+   background-color: #464A52;
+-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
+	        box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.container td:hover {
+  background-color: #FFF842;
+  color: #403E10;
+  font-weight: bold;
+  
+  box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+  
+  transition-delay: 0s;
+	  transition-duration: 0.4s;
+	  transition-property: all;
+  transition-timing-function: line;
+}
+
+@media (max-width: 800px) {
+.container td:nth-child(4),
+.container th:nth-child(4) { display: none; }
+}
+
+
+    </style>
+    <!--  Responsive CSS  -->
+    <style type="text/css">
+    @media only screen and (max-width: 600px) {
+      body[yahoo] .full_width_600 {width:90% !important;}
+    }
+    @media only screen and (max-width: 700px) {
+      body[yahoo] .full_width_700 {width:100% !important;}
+      body[yahoo] .txt_center {text-align:center !important;}
+      body[yahoo] .separator {height: 40px !important;}
+    }
+
+
+    </style>
+
+</head>
+<body style="margin: 0; padding: 0;" yahoo="fix">
+
+<div class="main_container">
+    <!--  Header  -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" align="center"
+           style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; ">
+        <tr>
+            <td align="center">
+                <table class="full_width_700" width="100%" border="0" cellpadding="0" cellspacing="0" align="center"
+                       style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0;">
+                    <tr>
+                        <td height="10" width="100%" style="height:10px;"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!--  Header Logo  -->
+                            <table class="full_width_700 txt_center" width="65%" align="left" border="0" cellpadding="0"
+                                   cellspacing="0"
+                                   style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0;">
+                                <tr>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--  End Header Logo  -->
+                            <!--  Date  -->
+                            <table class="full_width_700" width="34%" align="right" border="0" cellpadding="0"
+                                   cellspacing="0"
+                                   style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0;">
+                                <tr>
+                                    <td height="10" width="100%" style="height:20px;"></td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_center" style="text-align:right;">
+                                        <table class="full_width_700 txt_center" align="right" border="0"
+                                               cellpadding="0" cellspacing="0"
+                                               style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0;">
+                                            <td style="color: #8b8e94; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; letter-spacing:0.5px; text-transform:capitalize;">
+
+                                            </td>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--  End Date  -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="10" width="100%" style="height:10px;"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table class="container">
+        <thead>
+            <tr>
+                <th><h1>User</h1></th>
+                <th><h1>Fat click count</h1></th>
+                <th><h1>Stupid click count</h1></th>
+                <th><h1>Dumb click count</h1></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in obj %}
+            <tr>
+                <td>{{data.user}}</td>
+                <td>{{data.fat}}</td>
+                <td>{{data.stupid}}</td>
+                <td>{{data.dumb}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <!-- End In Container -->
+    <!--  Footer  -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" align="center"
+           style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+        <tr>
+            <td align="center">
+                <table class="full_width_700" border="0" cellpadding="0" cellspacing="0" align="center"
+                       style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0;">
+                    <tr>
+                        <td height="10" width="100%" style="height:10px;"></td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <!--  Info  -->
+                            <table class="full_width_700" width="100%" align="right" border="0" cellpadding="0"
+                                   cellspacing="0"
+                                   style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0;">
+                                <tr>
+                                    <td height="10" width="100%" style="height:10px;"></td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_center" style="text-align:center;">
+                                        <table class="full_width_700 txt_center" align="center" border="0"
+                                               cellpadding="0" cellspacing="0"
+                                               style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0;">
+                                            <tr>
+                                                <td style="color: #989cac; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400; letter-spacing:0.5px; text-transform:capitalize; text-align:center;">
+
+                                                    Copyright © {% now "Y" %} <a href="https://www.linkedin.com/in/jishin-c/"
+                                                                        target="blank"
+                                                                        style="color: #989cac; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing:0.5px;">
+                                                    Jishin Inc</a>. All rights reserved.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="10" width="100%" style="height:10px;"></td>
+                                            </tr>
+
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--  End Info  -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="30" width="100%" style="height:30px;"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!--  End Footer  -->
+</div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
